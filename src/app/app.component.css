@@ -1,0 +1,121 @@
+/* 
+    Add Rows Panel
+*/
+.treegrid-ardyn-top-panel
+{
+    background: red;
+    padding: 3px;
+    margin-bottom: 1px;
+}
+.treegrid-ardyn-button
+{
+    background: transparent;
+    border: thin solid transparent;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.treegrid-ardyn-button:hover
+{
+    background-color: #153268;
+    border: thin solid #0F244A;
+}
+.treegrid-ardyn-icon-add-root
+{
+    background: url("https://www.lidorsystems.com/images/integralui-web/resources/icons-x24.png") no-repeat -48px -120px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.treegrid-ardyn-icon-add-child
+{
+    background: url("https://www.lidorsystems.com/images/integralui-web/resources/icons-x24.png") no-repeat -120px -168px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+
+/* 
+    General TreeGrid settings
+*/
+.treegrid-ardyn-normal
+{
+    width: 800px;
+    height: 300px;
+}
+.treegrid-ardyn-normal .iui-treegrid-expand-box
+{
+    float: left;
+    margin: 3px 3px 0 0;
+}
+
+/* 
+    Cell Active Buttons
+*/
+.treegrid-ardyn-normal button
+{
+    background: #0064bb;
+    border: thin solid #0048aa;
+    color: white;
+    margin-top: 1px;
+    padding: 3px 5px;
+}
+.treegrid-ardyn-normal button:hover
+{
+    background: #008000;
+    border-color: #006400;
+}
+.treegrid-ardyn-button-block
+{
+    background: #e9e9e9;
+    border: thin solid #d5d5d5;
+    display: inline-block;
+    padding: 3px;
+}
+.treegrid-ardyn-button-block:hover
+{
+    background: white;
+    border-color: #bebebe;
+}
+.treegrid-ardyn-icons
+{
+    background-image: url(https://www.lidorsystems.com/images/integralui-web/resources/icons.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    vertical-align: middle;
+}
+.treegrid-ardyn-button-edit
+{
+    background-position: -128px -81px;
+}
+.treegrid-ardyn-button-remove
+{
+    background-position: -160px -96px;
+}
+.treegrid-ardyn-button-edit:hover, .treegrid-ardyn-button-remove:hover
+{
+    opacity: 1;
+} 
+
+/* 
+    Cell Text Editor
+*/
+.treegrid-ardyn-cell-text
+{
+    display: inline-block;
+    margin-top: 4px;
+    text-align: center;
+    vertical-align: middle;
+}
+.treegrid-ardyn-cell-input
+{
+    margin-top: 2px;
+}

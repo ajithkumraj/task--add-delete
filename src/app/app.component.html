@@ -1,0 +1,33 @@
+<div #application style="width:500px;">
+    <div class="treegrid-ardyn-top-panel">
+        <button class="treegrid-ardyn-button" (click)="addRoot()"><span class="treegrid-ardyn-icon-add-root"></span>Add Employee</button>
+    </div>
+    <iui-treegrid [columns]="columns" [rows]="rows" [controlStyle]="treegridStyle" [showFooter]="false" [rowHeight]="26" #treegrid>
+        <ng-template let-column [iuiTemplate]="{ type: 'header' }">
+            <span>{{column.headerText}}</span>
+        </ng-template>
+        <ng-template let-cell [iuiTemplate]="{ type: 'cell' }">
+            <div [ngSwitch]="cell.cid">
+                <div *ngSwitchCase="7" (dblclick)="onButtonsDblClick($event)" (mousedown)="onButtonsMouseDown($event)">
+                    <div *ngIf="cell.rid==currentEditRowID">
+                        <button (mousedown)="saveRow(cell.rid)">Save</button>
+                        <button (mousedown)="cancelEdit(cell.rid)">Cancel</button>
+                    </div>
+                    <div *ngIf="cell.rid!=currentEditRowID">
+                        <div class="treegrid-ardyn-button-block" (mousedown)="editRow(cell.rid)">
+                            
+                            <span class="treegrid-ardyn-icons treegrid-ardyn-button-edit"></span>
+                        </div>
+                        <div class="treegrid-ardyn-button-block" (mousedown)="removeRow(cell.rid)">
+                            <span class="treegrid-ardyn-icons treegrid-ardyn-button-remove"></span>
+                        </div>
+                    </div>
+                </div>
+                <div *ngSwitchDefault style="display:inline-block;">
+                    <input *ngIf="cell.saved==false" class="treegrid-ardyn-cell-input" [(ngModel)]="cell.editText" [iuiFocus]="currentEditCell==cell" (focus)="selectContent($event)" (keydown)="editorKeyDown($event)" [ngStyle]="{ width: getCellWidth(cell) + 'px' }" />
+                    <span *ngIf="cell.saved!=false" class="treegrid-ardyn-cell-text">{{cell.text}}</span>
+                </div>
+            </div>
+        </ng-template>
+    </iui-treegrid>
+</div>
